@@ -284,12 +284,20 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 1;
 }
 
+/* Resume Section */
+.resume {
+    padding-top: 12rem; /* Increased from 8rem to clear navbar */
+    padding-bottom: 4rem;
+}
+
 /* Redesigned Resume Styles (v2) */
 .resume-header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin-bottom: 4rem;
+    align-items: flex-end; /* Align to bottom to give breathing room */
+    margin-bottom: 5rem;
+    position: relative;
+    z-index: 10;
 }
 
 .resume-grid-v2 {
