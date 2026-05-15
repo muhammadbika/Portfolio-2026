@@ -9,6 +9,18 @@
     --font-heading: 'Montserrat', sans-serif;
     --font-body: 'Inter', sans-serif;
     --transition: all 0.3s ease;
+    --hero-overlay-start: rgba(13, 15, 18, 0.9);
+    --hero-overlay-end: rgba(13, 15, 18, 0.4);
+}
+
+body[data-theme="light"] {
+    --bg-color: #f5f7fb;
+    --surface-color: #ffffff;
+    --text-primary: #111827;
+    --text-secondary: #4b5563;
+    --accent-color: #2563eb;
+    --hero-overlay-start: rgba(245, 247, 251, 0.85);
+    --hero-overlay-end: rgba(245, 247, 251, 0.45);
 }
 
 * {
@@ -69,6 +81,32 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     padding: 2rem 5%;
     background: transparent;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.theme-toggle {
+    border: 1px solid var(--text-secondary);
+    color: var(--text-secondary);
+    background: transparent;
+    border-radius: 50px;
+    padding: 0.35rem 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: var(--font-heading);
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.theme-toggle:hover {
+    color: var(--text-primary);
+    border-color: var(--text-primary);
 }
 
 .nav-links {
@@ -164,7 +202,7 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to right, rgba(13, 15, 18, 0.9) 0%, rgba(13, 15, 18, 0.4) 100%), url("../assets/images/homepage.jpg") center/cover no-repeat; /* Updated bg */
+    background: linear-gradient(to right, var(--hero-overlay-start) 0%, var(--hero-overlay-end) 100%), url("../assets/images/homepage.jpg") center/cover no-repeat; /* Updated bg */
     z-index: -1;
 }
 
